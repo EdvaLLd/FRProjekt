@@ -1,5 +1,7 @@
-<p>bank-overview works!</p>
-<div *ngFor="let user of getUsersFromBase() ">
-    <app-custom-button userid={{user.id}} (clicked)="navigateToUser(user)"></app-custom-button>
+<h1>Klienter</h1>
+<div class="clientHolder">
+    <div *ngFor="let user of getUsersFromBase() ">
+        <app-custom-button userid={{user.id}} (clicked)="navigateToUser(user)"></app-custom-button>
+    </div>
 </div>
 

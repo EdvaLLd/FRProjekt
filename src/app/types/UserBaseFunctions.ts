@@ -19,7 +19,7 @@ export function getUsers(): BankUser[]{
     console.log(users);
     return users;
   }
-  export function populateBank(){
+  export function populateBank(): void{
     addUser({
       name: 'John',
       balance: 100,
@@ -42,7 +42,7 @@ export function getUsers(): BankUser[]{
     });
   }
 
-  export function addUser(user: BankUser){
+  export function addUser(user: BankUser): void{
     const jsonString: string = JSON.stringify(user, null, 2);
     sessionStorage.setItem('user' + user.id, jsonString);
   }

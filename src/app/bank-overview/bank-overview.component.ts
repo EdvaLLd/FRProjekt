@@ -13,7 +13,10 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class BankOverviewComponent {
 
+  //borde antagligen vara en ngOnInit()?
   constructor(private router: Router){
+    //Den här ska egentligen vara exempelvis en JSON-fil som sparas och kan uppdateras mellan varje körning
+    //men det kändes som att det var utanför scopet på den här uppgiften
     populateBank();
   }
   

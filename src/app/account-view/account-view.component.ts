@@ -6,7 +6,7 @@ import { getUser } from '../types/UserBaseFunctions';
 
 @Component({
   selector: 'app-account-view',
-  imports: [CustomButtonComponent, RouterLink],
+  imports: [RouterLink],
   templateUrl: './account-view.component.html',
   styleUrl: './account-view.component.css'
 })
