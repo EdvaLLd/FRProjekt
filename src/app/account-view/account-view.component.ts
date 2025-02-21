@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CustomButtonComponent } from "../custom-button/custom-button.component";
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { BankUser } from '../types/BankUser';
 import { getUser } from '../types/UserBaseFunctions';
@@ -14,7 +13,7 @@ export class AccountViewComponent {
   currentId!: number;
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {
+  ngOnInit():void {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       if(id != null)

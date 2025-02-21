@@ -17,7 +17,7 @@ export class CustomButtonComponent {
   }
 
 
-  handleClick(){
+  handleClick(): void{
     this.clicked.emit();
   }
 }
