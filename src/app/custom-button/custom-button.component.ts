@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { BankUser } from '../types/BankUser';
+import { getUser } from '../types/UserBaseFunctions';
 
 @Component({
   selector: 'app-custom-button',
@@ -7,8 +9,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './custom-button.component.css'
 })
 export class CustomButtonComponent {
-  @Input() buttonMessage!: string;
+  @Input() userid!: string;
   @Output() clicked = new EventEmitter<void>();
+
+  getUser(): BankUser{
+    return getUser(parseInt(this.userid));
+  }
+
 
   handleClick(){
     this.clicked.emit();

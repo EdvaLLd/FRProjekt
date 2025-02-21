@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { Users } from './types/AllUsers';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Bank';
+  title = "project";
 }
