@@ -3,6 +3,7 @@ import { BankUser } from '../types/BankUser';
 import { CustomButtonComponent } from "../custom-button/custom-button.component";
 import { CommonModule } from '@angular/common';
 import { getUsers, populateBank } from '../types/UserBaseFunctions';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-bank-overview',
@@ -12,7 +13,7 @@ import { getUsers, populateBank } from '../types/UserBaseFunctions';
 })
 export class BankOverviewComponent {
 
-  constructor(){
+  constructor(private router: Router){
     populateBank();
   }
   
@@ -21,6 +22,6 @@ export class BankOverviewComponent {
   }
 
   navigateToUser(user: BankUser){
-    console.log("Navigate to user " + user.name);
+    this.router.navigate(["/account-view", user.id]);
   }
 }

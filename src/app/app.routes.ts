@@ -10,6 +10,6 @@ import { BankOverviewComponent } from './bank-overview/bank-overview.component';
 //component: Component
 
 export const routes: Routes = [
- {path: "account-view", component: AccountViewComponent},
+ {path: "account-view/:id", component: AccountViewComponent},
  {path: "", component: BankOverviewComponent}
 ];

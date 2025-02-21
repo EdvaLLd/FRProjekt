@@ -1,5 +1,3 @@
-<p>account-view works!</p>
-<button (click)="addToCount()"> Count + 1 </button>
-<p>Value of count is: {{count}}</p>
-
-<app-custom-button buttonMessage="Click me" (clicked)="addToCount()"></app-custom-button>
+<a routerLink="">Navigera till överblicksvyn</a>
+<h1>Välkommen {{getUser().name}}! (ID {{getUser().id}})</h1>
+<p>Saldo: {{getUser().balance}}</p>
